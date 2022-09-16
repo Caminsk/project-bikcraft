@@ -4,7 +4,7 @@
 
 > Origamid
 
-Projeto de estudo feito para o curso da ORIGAMID.
+Projeto de estudo feito para o curso da ORIGAMID, com foco em treinar o conceito de posicionamento utilizando display : flex e display : grid.
 
 [🔗 Clique aqui para acessar](https://caminsk.github.io/project-bikcraft/)
 
