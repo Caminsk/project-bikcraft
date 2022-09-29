@@ -164,6 +164,9 @@ main ul :hover {
     gap: 30px;
     margin-top: 20px;
   }
+  .imagem {
+    width: 600px;
+  }
   .header {
     gap: 30px;
   }
