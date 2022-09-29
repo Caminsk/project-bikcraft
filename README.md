@@ -8,6 +8,12 @@ Projeto de estudo feito para o curso da ORIGAMID, com foco em treinar o conceito
 
 [🔗 Clique aqui para acessar](https://caminsk.github.io/project-bikcraft/)
 
+## 👨‍💻 Refatoração 29.09.22
+
+- Adicionado tags Semanticas
+- Mudança de unidade de Px para Rem
+- Algumas interações utilizando Pseudo Classes
+
 ## 🛠 Tecnologias
 
 - HTML

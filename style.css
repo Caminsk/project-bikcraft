@@ -4,8 +4,8 @@ body {
   background-color: #f7f7f7;
   margin: 0px;
   display: grid; /*Defini o layout inicial com grid*/
-  gap: 60px; /* */
-  margin-top: 60px;
+  gap: 3.75rem; /* */
+  margin-top: 3.75rem;
   justify-items: center; /*Para alinhar os items todos ao centro*/
 }
 
@@ -25,23 +25,38 @@ h3 {
 }
 
 p {
-  font-size: 20px; /*Todos paragrafos com 20px*/
+  font-size: 1.25rem; /*Todos paragrafos com 20px*/
 }
 
-.menu {
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 3.75rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
   display: flex; /*Ao definir ele remove o espaço inicial do elemento inline, juntado todos*/
   flex-wrap: wrap; /*Caso não caiba tudo na mesma linha, quebre para a próxima*/
-  gap: 20px; /*Com o gap damos novamente o espaçamento necessário*/
+  gap: 1.25rem; /*Com o gap damos novamente o espaçamento necessário*/
   justify-content: center; /* Alinha os items ao centro*/
 }
 
 .menu a {
   /*Links menu*/
+  display: block;
   background-color: #ffff;
   color: #000;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   border-radius: 4px;
   text-transform: uppercase;
+  border: transparent solid 3px;
+}
+
+li a:hover {
+  border-color: #ee2211;
 }
 
 .conteudo {
@@ -55,57 +70,77 @@ p {
   padding: 50px;
   text-align: right;
   display: grid;
-  gap: 20px; /*Para separar o conteúdo*/
+  gap: 1.25rem; /*Para separar o conteúdo*/
   align-content: center; /*Alinha o conteúdo ao centro */
   justify-items: end; /*Alinha todo conteúdo a ponta*/
   position: relative; /*O absolute passa a ficar em relação a esse posicionamento*/
 }
 
-.detalhe {
+.intro h1 {
+  font-size: 2rem;
+}
+
+.intro ::before {
+  content: ""; /* Detalhe.. No pseudo elemento sempre precisa de um conteúdo*/
   background-color: #ee2211;
   position: absolute; /*O elemento não influencia nos outros*/
-  width: 60px;
+  width: 3.75rem;
   height: 4px;
   right: -30px;
   top: 30px;
 }
+
 .botao {
   background-color: #ee2211;
   color: white;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   border-radius: 4px;
   text-transform: uppercase;
 }
 
+.botao:hover {
+  background: #900;
+}
+
 .subtitulo {
-  font-size: 64px;
+  font-size: 4rem;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.2);
   text-align: right;
-  padding: 40px;
+  padding: 2.5rem;
   align-self: center; /*Align-self fala com um item especifico dentro do grid*/
+  background-image: url(./img/onda.svg);
 }
 
 .vantagens {
   background-color: #ffff;
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .vantagens-items {
   display: grid;
   grid-template-columns: auto 1fr; /*Auto-para pegar exatamente o tamanho do conteúdo "imagem" e 1r para distribuir o quanto sobrar*/
   gap: 10px 20px;
-  padding: 20px;
+  padding: 1.25rem;
+  border-left: 4px solid #ee231100;
 }
 
 .vantagens p {
   grid-column: 2; /*Defini em qual coluna o p deve ficar*/
 }
 
+.vantagens-items:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+main ul :hover {
+  border-color: #ee2211;
+}
+
 .rodape {
   background-color: #ffff;
   width: 100%; /*Para pegar de ponta a ponta*/
   text-align: center;
-  padding: 40px;
+  padding: 2.5rem;
   box-sizing: border-box; /*para o widht não somar com o padding e estourar o layout*/
 }
