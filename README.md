@@ -10,7 +10,7 @@ Projeto de estudo feito para o curso da ORIGAMID, com foco em treinar o conceito
 
 ## 👨‍💻 Refatoração 29.09.22
 
-- Adicionado tags Semanticas
+- Adicionado tags Semânticas
 - Mudança de unidade de Px para Rem
 - Algumas interações utilizando Pseudo Classes
 
