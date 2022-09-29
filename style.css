@@ -90,6 +90,11 @@ li a:hover {
   top: 30px;
 }
 
+.imagem img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .botao {
   background-color: #ee2211;
   color: white;
@@ -143,4 +148,45 @@ main ul :hover {
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box; /*para o widht não somar com o padding e estourar o layout*/
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .intro {
+    text-align: left;
+    justify-items: start;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .intro ::before {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }

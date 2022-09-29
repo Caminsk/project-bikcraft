@@ -13,6 +13,7 @@ Projeto de estudo feito para o curso da ORIGAMID, com foco em treinar o conceito
 - Adicionado tags Semânticas
 - Mudança de unidade de Px para Rem
 - Algumas interações utilizando Pseudo Classes
+- Layout responsivo
 
 ## 🛠 Tecnologias
 
