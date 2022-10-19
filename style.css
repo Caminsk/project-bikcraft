@@ -1,12 +1,35 @@
 /*Iniciando pelo body já definindo estilos principais herdados pela página toda*/
+:root{
+  --cor-primaria: #ee2211; 
+  --cor-primaria-escura: #900;  
+  --cor-background:#f7f7f7; 
+  --cor-background-2: #ffffff;
+  --cor-texto: #000;
+  --cor-subtitulo: rgba(0, 0, 0, 0.2);
+  --onda: url(./img/onda.svg);
+}
+
+
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --cor-background: #111111;
+    --cor-background-2: #000000;
+    --cor-texto: #ffffff;
+    --cor-subtitulo: rgba(255, 255, 255, 0.2);
+    --onda: url(./img/onda-escura.svg);
+  }  
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f7f7;
+  background-color: var(--cor-background);
   margin: 0px;
   display: grid; /*Defini o layout inicial com grid*/
   gap: 3.75rem; /* */
   margin-top: 3.75rem;
   justify-items: center; /*Para alinhar os items todos ao centro*/
+  color: var(--cor-texto);
 }
 
 img {
@@ -47,8 +70,8 @@ ul {
 .menu a {
   /*Links menu*/
   display: block;
-  background-color: #ffff;
-  color: #000;
+  background-color: var(--cor-background-2);
+  color: var(--cor-texto);
   padding: 1rem 2rem;
   border-radius: 4px;
   text-transform: uppercase;
@@ -56,7 +79,7 @@ ul {
 }
 
 li a:hover {
-  border-color: #ee2211;
+  border-color: var(--cor-primaria);
 }
 
 .conteudo {
@@ -66,7 +89,7 @@ li a:hover {
 }
 
 .intro {
-  background-color: #ffff;
+  background-color: var(--cor-background-2);
   padding: 50px;
   text-align: right;
   display: grid;
@@ -82,7 +105,7 @@ li a:hover {
 
 .intro ::before {
   content: ""; /* Detalhe.. No pseudo elemento sempre precisa de um conteúdo*/
-  background-color: #ee2211;
+  background-color: var(--cor-primaria);
   position: absolute; /*O elemento não influencia nos outros*/
   width: 3.75rem;
   height: 4px;
@@ -96,7 +119,7 @@ li a:hover {
 }
 
 .botao {
-  background-color: #ee2211;
+  background-color: var(--cor-primaria);
   color: white;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -104,21 +127,21 @@ li a:hover {
 }
 
 .botao:hover {
-  background: #900;
+  background: var(--cor-primaria-escura);
 }
 
 .subtitulo {
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--cor-subtitulo);
   text-align: right;
   padding: 2.5rem;
   align-self: center; /*Align-self fala com um item especifico dentro do grid*/
-  background-image: url(./img/onda.svg);
+  background-image: var(--onda);
 }
 
 .vantagens {
-  background-color: #ffff;
+  background-color: var(--cor-background-2);
   padding: 2.5rem;
 }
 
@@ -135,15 +158,15 @@ li a:hover {
 }
 
 .vantagens-items:nth-child(odd) {
-  background: #f7f7f7;
+  background: var(--cor-background);
 }
 
 main ul :hover {
-  border-color: #ee2211;
+  border-color: var(--cor-primaria);
 }
 
 .rodape {
-  background-color: #ffff;
+  background-color: var(--cor-background-2);
   width: 100%; /*Para pegar de ponta a ponta*/
   text-align: center;
   padding: 2.5rem;
@@ -163,9 +186,6 @@ main ul :hover {
   body {
     gap: 30px;
     margin-top: 20px;
-  }
-  .imagem {
-    width: 600px;
   }
   .header {
     gap: 30px;
